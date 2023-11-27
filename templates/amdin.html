@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/path/to/tailwind.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Simple House Template</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />    
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-style.css')}}">
+    </head>
+    <div class="container">
+        <!-- Top box -->
+            <!-- Logo & Site Name -->
+            <div class="placeholder">
+                <div class="parallax-window" data-parallax="scroll" data-image-src="https://i.pinimg.com/564x/99/a5/0e/99a50e8f5fb404bec107f6b6222b4b14.jpg">
+                    <div class="tm-header">
+                        <div class="row tm-header-inner">
+                            <div class="col-md-6 col-12">
+                                <img src="https://scontent.fdac75-1.fna.fbcdn.net/v/t1.6435-0/cp0/p64x64/119038505_3471019669612595_9115556304906805068_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=70495d&_nc_ohc=U13566gwsKIAX-b4H_A&_nc_ht=scontent.fdac75-1.fna&tp=27&oh=e9b37e84a5eb3975e39569651ed6ecad&oe=60E510DF" alt="Logo" class="tm-site-logo" /> 
+                                <div class="tm-site-text-box">
+                                    <h1 class="tm-site-title">Faridpur Pets Zone</h1>
+                                    <h6 class="tm-site-description">A House Of Pets</h6>	
+                                </div>
+                            </div>
+                            <nav class="col-md-6 col-12 tm-nav">
+                                <ul class="tm-nav-ul">
+                                    <li class="tm-nav-li"><a href="/" class="tm-nav-link active">Home</a></li>
+                                    <li class="tm-nav-li"><a href="/contact" class="tm-nav-link">About</a></li>
+                                    <li class="tm-nav-li"><a href="/admin" class="tm-nav-link">Admin</a></li>
+                                    <li class="tm-nav-li"><a href="/gallery" class="tm-nav-link">Gallery</a></li>
+                                    <li class="tm-nav-li"><a href="/Sell" class="tm-nav-link">Sell</a></li>
+                                </ul>
+                            </nav>	
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="text-gray-400 bg-gray-900 body-font">
+                <div class="container px-5 py-24 mx-auto">
+                  <div class="flex flex-col text-center w-full mb-20">
+                    <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-black">Welcome  Admin</h1>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Banh mi cornhole echo park skateboard authentic crucifix neutra tilde lyft biodiesel artisan direct trade mumblecore 3 wolf moon twee</p>
+                  </div>
+                  <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+                    <form action="/remove" method="POST">
+                    <table class="table-auto w-full text-left whitespace-no-wrap">
+                      <thead>
+                        <tr>
+                          
+                          <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">Pet Name</th>
+                          <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">Price</th>
+                          <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">Uploader name</th>
+                          <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">Contact</th>
+                          <th class="w-10 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tr rounded-br"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          {%for i in dat%}
+                        <tr>
+                          <td class="px-4 py-3">{{dat[i]["name"]}}</td>
+                          <td class="px-4 py-3">{{dat[i]["price"]}}</td>
+                          <td class="px-4 py-3">{{dat[i]["uploader"]}}</td>
+                          <td class="px-4 py-3 text-lg text-black">{{dat[i]["phone"]}}</td>
+                          <td class="w-10 text-center">
+                            <input type="radio" name="options" id="option2" value="{{i}}">
+                          </td>
+                        </tr>
+                        {%endfor%}
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+                    <a class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                    <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">remove</button>
+                  </div>
+                </div>
+            </form>
+              </section>
+
+
+    </div></html>
