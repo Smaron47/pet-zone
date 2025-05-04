@@ -266,6 +266,12 @@ dog and cat listing site
 simple vendor portal
 HTML upload form Flask
 pet gallery Python
+Flask pet marketplace
+pet selling web app
+dog and cat listing site
+simple vendor portal
+HTML upload form Flask
+pet gallery Python
 ```
 
 ---
